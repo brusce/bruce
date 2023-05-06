@@ -1,0 +1,10 @@
+// ==UserScript==
+// @name         AutorespawnII - Tricksplit.io
+// @version      1.0.0
+// @author       Alvariithoo & Mrozio
+// @description  instantly respawn & new settings
+// @match        *://tricksplit.io/
+// @run-at       document-start
+// ==/UserScript==
+
+(async t=>{"use strict";function e(t){let e=document.createElement("script");e.type="text/javascript",e.textContent=t,document.head.appendChild(e)}async function n(){for(let n of["vendor.js","main.js"])await fetch(${t}/static/js/${n}).then(t=>t.text()).then(e).catch(()=>{throw Error(Failed to load dependency ${n})})}document.open(),await fetch(${t}/index.html).then(t=>t.text()).then(t=>document.write(t)),document.close(),n()})("https://alvariithoo.glitch.me/tricksplit-client-modded%22);
